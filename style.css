@@ -18,7 +18,9 @@ nav{
 nav a{
     color: #ffffff;
     text-decoration: none;
-    display: inline-block;
+    /* hay que poner el inline-block para que se pueda mover la animacion */
+    display: inline-block; 
+    animation: moverIzquierda 1s ease-in;
 }
 
 header{
@@ -49,6 +51,7 @@ img{
     height: 450px;
     object-fit: cover;
     width: auto;
+    animation: moverArriba 1s ease-in;
 }
 
 .textos{
@@ -58,10 +61,12 @@ img{
 
 .textos h1{
     font-size: 80px;
+    animation: moverDerecha 1s ease-in;
 }
 
 .textos h2{
     font-size: 30px;
+    animation: moverIzquierda 1s ease-in;
 }
 
 .textos a{
@@ -75,6 +80,7 @@ img{
     border-radius: 3px;
     text-align: center;
     padding: 10px 0px;
+    animation: moverArriba 1s ease-in;
 }
 
 .wabe{
@@ -85,5 +91,48 @@ img{
     background: -webkit-linear-gradient(to right, #89216B, #DA4453);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #89216B, #DA4453);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari */
 }
+
+
+/* Animaciones */
+
+/* Animacion a: (nav a) */
+
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px); /* asi se mueve de izquierda a derecha*/
+        /* si quiero que se mueva de derecha a izquierda debo poner 100px */
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverArriba{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
