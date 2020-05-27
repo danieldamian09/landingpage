@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header{
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding: 48px;
+    width: 100%;
+
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+
+img{
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    width: auto;
+}
+
+.textos{
+    width: 50%;
+    color: #ffffff;
+}
+
+.textos h1{
+    font-size: 80px;
+}
+
+.textos h2{
+    font-size: 30px;
+}
+
+.textos a{
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #ffffff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.wabe{
+    height: 100px;
+    width: 100%;
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 
+}
