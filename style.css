@@ -13,22 +13,53 @@ nav{
     position: fixed;
     top: 20px;
     left: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 nav a{
     color: #ffffff;
     text-decoration: none;
-    /* hay que poner el inline-block para que se pueda mover la animacion */
-    display: inline-block; 
+    /* hay que poner el inline-block para que se pueda mover la animacion  */
+    /* display: inline-block;  */
+    /* animation: moverIzquierda 1s ease-in; */
+}
+
+.icono{
+    display: block;
+    z-index: 100000;
     animation: moverIzquierda 1s ease-in;
 }
 
-header{
-    background: #DA4453;
+.enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #5C258D;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89216B, #DA4453);
+    background: linear-gradient(to right, #4389A2, #5C258D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+
+header{
+    background: #5C258D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4389A2, #5C258D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: auto;
     padding: 48px;
@@ -86,16 +117,30 @@ img{
 .wabe{
     height: 100px;
     width: 100%;
-    background: #DA4453;
+    background: #5C258D;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89216B, #DA4453);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari */
+    background: linear-gradient(to right, #4389A2, #5C258D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
 /* Animaciones */
+
+
+.uno{
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+
+}
+
+.dos{
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
 
 /* Animacion a: (nav a) */
 
@@ -136,3 +181,75 @@ img{
     }
 }
 
+@media screen and (max-width:1000px){
+    img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:800px){
+    img {
+        height: 370px;
+    }
+
+    .textos h1{
+        font-size: 70px;
+    }
+
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    img {
+        height: 250px;
+    }
+
+    .textos h1 {
+        font-size: 40px;
+    }
+
+    .textos h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .textos h1 {
+        font-size: 60px;
+    }
+
+    .textos h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    img {
+        height: 160px;
+    }
+
+    .textos h1 {
+        font-size: 35px;
+    }
+
+    .textos a{
+        width: 120px;
+    }
+
+    .textos h2 {
+        font-size: 15px;
+    }
+}
